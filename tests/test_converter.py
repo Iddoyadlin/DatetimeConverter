@@ -1,9 +1,17 @@
 import unittest
+import os
 
 from patternconverter import PatternConverter
 
 
 class ConverterTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        pass
+
+    @classmethod
+    def tearDownClass(cls):
+        pass
 
     def setUp(self):
         pass
