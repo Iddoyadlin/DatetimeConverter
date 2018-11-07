@@ -9,12 +9,12 @@ from patternconverter import PatternConverter
 class ConverterTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.java_gateway = JavaServer()
-        cls.java_gateway.run_server()
+        cls.java_gateway_server = JavaServer()
+        cls.java_gateway_server.run_server()
 
     @classmethod
     def tearDownClass(cls):
-        cls.java_gateway.shutdown_server()
+        cls.java_gateway_server.shutdown_server()
 
     def setUp(self):
         self.gateway = JavaGateway()
