@@ -18,29 +18,28 @@ class ConverterTests(unittest.TestCase):
 
     def setUp(self):
         self.gateway = JavaGateway()
+        self.app = self.gateway.entry_point
 
     def test_year_month_day_format_conversion_to_java(self):
         date = "2018-11-07"
 
-        python_format = "%Y-%M-%d"
+        python_format = "%Y-%m-%d"
         c = PatternConverter()
         converted_format = c.convert_to_iso_8601(pattern=python_format)
 
-        dt_formatter = self.gateway.jvm.java.time.format.DateTimeFormatter
-        formatter = dt_formatter.ofPattern(converted_format)
-
-        self.assertEqual(date.format(formatter), date)
+        java_date = self.app.formatDate(date, converted_format)
+        self.assertEqual(java_date, date)
 
     def test_python_to_iso_8601(self):
-        python_format = '%Y%M%d'
+        python_format = '%Y%m%d'
         c = PatternConverter()
         converted_format = c.convert_to_iso_8601(pattern=python_format)
-        expected_format = 'yyyymmdd'
+        expected_format = 'yyyyMMdd'
         self.assertEqual(expected_format, converted_format)
 
     def test_python_to_extended_iso_8601(self):
-        python_format = '%Y-%M-%d'
+        python_format = '%Y-%m-%d'
         c = PatternConverter()
         converted_format = c.convert_to_iso_8601(pattern=python_format)
-        expected_format = 'yyyy-mm-dd'
+        expected_format = 'yyyy-MM-dd'
         self.assertEqual(expected_format, converted_format)
