@@ -7,6 +7,6 @@ then
     apt-get update && apt-get install oracle-java8-set-default
 else
     echo -e "\nCompiling java gateway...\n"
-    javac  -cp py4j0.10.8.1.jar:. java_gateway_server.java
+    javac  -cp py4j0.10.8.1.jar:. javaGatewayServer.java
     echo -e "Done compiling java gateway!\n"
 fi
