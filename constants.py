@@ -1,6 +1,6 @@
 class JavaStandard:
     DAY_OF_MONTH = 'd'
-    YEAR = 'u'
+    YEAR = 'y'
     MONTH_OF_YEAR = 'M'
     HOUR_OF_DAY = 'H'
     SECOND_OF_MINUTE = 's'
