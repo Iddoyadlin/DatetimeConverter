@@ -1,5 +1,5 @@
 from functools import reduce
-from datetime_converter.constants import JavaStandard as Java, CStandard as C
+from py2jdatetime.constants import JavaStandard as Java, CStandard as C
 
 
 class PatternConverter:
