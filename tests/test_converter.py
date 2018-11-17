@@ -2,7 +2,7 @@ import unittest
 from py4j.java_gateway import JavaGateway
 
 from tests.java.java_server import JavaServer
-from datetime_converter.patternconverter import PatternConverter
+from py2jdatetime.patternconverter import PatternConverter
 
 
 class ConverterTests(unittest.TestCase):
