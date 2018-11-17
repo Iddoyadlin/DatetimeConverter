@@ -1,2 +1,2 @@
-# DatetimeConverter
-a library for converting datetime patterns between ISO-8601 standard and C standard.
+# PythonToJavaDatetime
+a library for converting datetime patterns between C standard (Python) to ISO-8601 standard (java).
