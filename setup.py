@@ -5,14 +5,14 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="py2jdatetime",
-    version="0.0.1",
+    version="0.0.3",
     author="Iddo Yadlin",
     author_email="iddoyadlin@gmail.com",
     description="A small example package",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/Iddoyadlin/PythonToJavaDatetime",
-    packages=setuptools.find_packages(),
+    packages=['datetime_converter'],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
